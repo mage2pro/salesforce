@@ -1,0 +1,26 @@
+{
+	"name": "mage2pro/salesforce"
+	,"version": "0.0.1"
+	,"description": "The «Salesforce» extension for Magento 2."
+	,"type": "magento2-module"
+	,"homepage": "https://mage2.pro/c/extensions/salesforce"
+	,"license": "proprietary"
+	,"authors": [{
+		"name": "Dmitry Fedyuk",
+		"email": "admin@mage2.pro",
+		"homepage": "https://mage2.pro/users/dmitry_fedyuk",
+		"role": "Developer"
+	}]
+	,"require": {"mage2pro/core": ">=2.4.55"}
+	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\Salesforce\\": ""}}
+	,"keywords": [
+		"API"
+		,"CRM"
+		,"eCommerce"
+		,"Integration"
+		,"Magento"
+		,"Magento 2"
+		,"Magento extension"
+		,"Salesforce"
+	]
+}
