@@ -42,6 +42,22 @@
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
 					<comment><![CDATA[Enable the «<a href='https://mage2.pro/c/extensions/salesforce' target='_blank'>Salesforce</a>» extension?]]></comment>
 				</field>
+				<field
+					id='domain'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='2'
+					translate='label'
+					type='text'
+				>
+					<label>Your Salesforce domain</label>
+					<comment><![CDATA[You can find it out in your browser's address bar after logging into your Salesforce application.
+<br/>Please specify the <b><a href='https://en.wikipedia.org/wiki/Domain_name' target='_blank'>domain name</a> only</b>, without a protocol and path.
+<br/>For example, if you see <code>https://mage2pro-dev-ed.lightning.force.com/one/one.app#/setup/home?a:t=1499557450454</code> in your browser's address bar, then your domain is <code>mage2pro-dev-ed.lightning.force.com</code>.]]></comment>
+					<depends>
+						<field id='enable'>1</field>
+					</depends>
+					<validate>required-entry</validate>
+				</field>
 			</group>
 		</section>
 	</system>
