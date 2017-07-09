@@ -56,7 +56,7 @@
 					<depends>
 						<field id='enable'>1</field>
 					</depends>
-					<validate>required-entry</validate>
+					<validate>required-entry df-validate-domain</validate>
 				</field>
 			</group>
 		</section>
