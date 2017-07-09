@@ -5,6 +5,15 @@ use Dfe\Salesforce\Settings\General as G;
 final class Client extends \Df\API\Client {
 	/**
 	 * 2017-07-09
+	 * @override
+	 * @see \Df\API\Client::_construct()
+	 * @used-by \Df\API\Client::__construct()
+	 * @see \Df\ZohoBI\API\Client::_construct()
+	 */
+	final protected function _construct() {parent::_construct(); $this->addFilterJsonDecode();}
+
+	/**
+	 * 2017-07-09
 	 * Note 1.
 	 * Despite the official documentation says that the JSON format is default, it is not true
 	 * (at least, the «services/data» resource returns XML by defalt):

@@ -15,7 +15,7 @@ final class Basic extends TestCase {
 	 * «You do not need authentication to retrieve the list of versions.»
 	 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_versions.htm
 	 */
-	function t01_versions() {echo F::s()->versions();}
+	function t01_versions() {echo df_json_encode(F::s()->versions());}
 
 	/**
 	 * 2017-07-09
