@@ -1,0 +1,30 @@
+<?php
+namespace Dfe\Salesforce\API;
+use Df\Core\Exception as DFE;
+// 2017-07-09
+final class Facade {
+	/**
+	 * 2017-07-09
+	 * «Lists summary information about each Salesforce version currently available,
+	 * including the version, label, and a link to each version's root.
+	 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_versions.htm
+	 * «You do not need authentication to retrieve the list of versions.»
+	 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_versions.htm
+	 */
+	function versions() {echo $this->p('services/data');}
+
+	/**
+	 * 2017-07-09
+	 * @param string $path
+	 * @param array(string => mixed) $p [optional]
+	 * @param string|null $method [optional]
+	 * @return array(string => mixed)
+	 * @throws DFE
+	 */
+	private function p($path, array $p = [], $method = null) {return
+		(new Client($path, $p, $method))->p()
+	;}
+
+	/** @return self */
+	static function s() {static $r; return $r ? $r : $r = new self;}
+}
