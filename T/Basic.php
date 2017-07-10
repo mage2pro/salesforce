@@ -8,7 +8,7 @@ final class Basic extends TestCase {
 	function t00() {}
 
 	/**
-	 * 2017-07-08
+	 * @test 2017-07-08
 	 * «Lists summary information about each Salesforce version currently available,
 	 * including the version, label, and a link to each version's root.
 	 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_versions.htm
@@ -22,7 +22,7 @@ final class Basic extends TestCase {
 		df_last(df_http_json(self::url('services/data')))['url']
 	)));}
 
-	/** @test 2017-07-09 */
+	/** 2017-07-09 */
 	function t03_invalid() {echo df_json_encode(F::s()->invalid());}
 
 	/**
