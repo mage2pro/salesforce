@@ -1,6 +1,6 @@
 {
 	"name": "mage2pro/salesforce"
-	,"version": "0.0.3"
+	,"version": "0.0.4"
 	,"description": "The «Salesforce» extension for Magento 2."
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/c/extensions/salesforce"
