@@ -58,6 +58,75 @@
 					</depends>
 					<validate>required-entry df-validate-domain</validate>
 				</field>
+				<group
+					id='oauth'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='3'
+					translate='label'
+				>
+					<label>OAuth 2.0</label>
+					<comment><![CDATA[Your Salesforce instance should authenticate your Magento instance by the <a href='https://oauth.net/2/' target='_blank'>OAuth 2.0</a> protocol.]]></comment>
+					<field
+						id='clientId'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='1'
+						translate='label'
+						type='text'
+					>
+						<label>Client Identifier</label>
+						<comment><![CDATA[An OAuth 2.0 «Client Identifier», as defined in the <a href='https://tools.ietf.org/html/rfc6749#section-2.2' title='RFC 6749 specification, Section 2.2: «Client Identifier»' target='_blank'>section 2.2</a> of the RFC 6749 specification.
+<br/>Salesforce <a href='https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_defining_remote_access_applications.htm#intro_defining_remote_access_applications' target='_blank' title='Defining Connected Apps - Force.com REST API Developer Guide'>names</a> this entity as «<b>Consumer Key</b>».
+<br/><a href='https://mage2.pro/t/3838' title='How to register a Salesforce Connected App for integration with Magento 2?' target='_blank'>How to get it?</a>]]></comment>
+						<depends>
+							<field id='enable'>1</field>
+						</depends>
+						<validate>required-entry</validate>
+					</field>
+					<field
+						id='clientPassword'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='2'
+						translate='label'
+						type='obscure'
+					>
+						<label>Client Password</label>
+						<comment><![CDATA[The OAuth 2.0 «Client Password» for the «Client Identifier» above, as defined in the <a href='https://tools.ietf.org/html/rfc6749#section-2.3.1' title='RFC 6749 specification, Section 2.3.1: «Client Password»' target='_blank'>section 2.3.1</a> of the RFC 6749 specification.
+<br/>Salesforce <a href='https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_defining_remote_access_applications.htm#intro_defining_remote_access_applications' target='_blank' title='Defining Connected Apps - Force.com REST API Developer Guide'>names</a> this entity as «<b>Consumer Secret</b>».
+<br/><a href='https://mage2.pro/t/3838' title='How to register a Salesforce Connected App for integration with Magento 2?' target='_blank'>How to get it?</a>]]></comment>
+						<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+						<depends>
+							<field id='enable'>1</field>
+						</depends>
+						<validate>required-entry</validate>
+					</field>
+					<field
+						dfWebhook_backend='true'
+						dfWebhook_suffix='oauth'
+						id='redirectionEndpoint'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='3'
+						translate='label'
+						type='Df\Sso\FE\CustomerReturn'
+					>
+						<label>Redirection Endpoint</label>
+						<comment><![CDATA[The OAuth 2.0 «Redirection Endpoint», as defined in the <a href='https://tools.ietf.org/html/rfc6749#section-3.1.2' title='RFC 6749 specification, Section 3.1.2: «Redirection Endpoint»' target='_blank'>section 3.1.2</a> of the RFC 6749 specification.
+<br/>Salesforce <a href='https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_defining_remote_access_applications.htm#intro_defining_remote_access_applications' target='_blank' title='Defining Connected Apps - Force.com REST API Developer Guide'>names</a> this entity as «<b>Callback URL</b>».
+<br/>Set it in your Salesforce <a href='https://mage2.pro/t/3838' title='How to register a Salesforce Connected App for integration with Magento 2?' target='_blank'>app registration form</a> (Step 4).]]></comment>
+						<depends><field id='enable'>1</field></depends>
+					</field>
+					<field
+						id='authenticate'
+						showInDefault='1' showInWebsite='1' showInStore='1'
+						sortOrder='4'
+						type='Dfe\Salesforce\Button'
+					>
+<!-- 2017-06-29
+«How to implement a dynamically generated comment for a backend configuration field?»
+https://mage2.pro/t/4076 -->
+						<comment model='Dfe\Salesforce\Button' />
+						<depends><field id='enable'>1</field></depends>
+					</field>
+				</group>
 			</group>
 		</section>
 	</system>

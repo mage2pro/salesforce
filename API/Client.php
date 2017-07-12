@@ -56,6 +56,7 @@ final class Client extends \Df\API\Client {
 		// 		Transfer-encoding: chunked
 		// 		Vary: Accept-Encoding
 		,'Accept-Encoding' => 'gzip'
+		,'Authorization' => 'Bearer ' . df_oauth_app($this)->token()
 	];}
 
 	/**
