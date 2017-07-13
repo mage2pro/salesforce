@@ -8,9 +8,8 @@ final class Client extends \Df\API\Client {
 	 * @override
 	 * @see \Df\API\Client::_construct()
 	 * @used-by \Df\API\Client::__construct()
-	 * @see \Df\ZohoBI\API\Client::_construct()
 	 */
-	final protected function _construct() {parent::_construct(); $this->addFilterJsonDecode();}
+	protected function _construct() {parent::_construct(); $this->resJson();}
 
 	/**
 	 * 2017-07-09
@@ -29,7 +28,7 @@ final class Client extends \Df\API\Client {
 	 * @used-by \Df\API\Client::p()
 	 * @return array(string => string)
 	 */
-	final protected function headers() {return [
+	protected function headers() {return [
 		'Accept' => 'application/json'
 		// 2017-07-10
 		// Note 1:
