@@ -15,15 +15,15 @@ final class Basic extends TestCase {
 	 * «You do not need authentication to retrieve the list of versions.»
 	 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_versions.htm
 	 */
-	function t01_versions() {echo df_json_encode(F::s()->versions());}
+	function t01_versions() {print_r(df_json_encode(F::s()->versions()));}
 
 	/** 2017-07-09 */
-	function t02_the_latest_version() {echo df_json_prettify(file_get_contents(self::url(
+	function t02_the_latest_version() {print_r(df_json_prettify(file_get_contents(self::url(
 		df_last(df_http_json(self::url('services/data')))['url']
-	)));}
+	))));}
 
 	/** 2017-07-09 */
-	function t03_invalid() {echo df_json_encode(F::s()->invalid());}
+	function t03_invalid() {print_r(df_json_encode(F::s()->invalid()));}
 
 	/**
 	 * 2017-07-09
