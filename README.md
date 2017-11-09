@@ -1,4 +1,4 @@
-The extension integrates your Magento 2 based webstore with the **[Salesforce](https://salesforce.com)** CRM software.
+This extension integrates a Magento 2 based webstore with the **[Salesforce](https://salesforce.com)** CRM software.
 
 ## How to buy
 The extension is not released yet, so there is no way to buy it just now.  
