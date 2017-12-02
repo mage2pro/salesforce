@@ -61,10 +61,10 @@ final class Client extends \Df\API\Client {
 	/**
 	 * 2017-07-09
 	 * @override
-	 * @see \Df\API\Client::uriBase()
+	 * @see \Df\API\Client::urlBase()
 	 * @used-by \Df\API\Client::__construct()
 	 * @used-by \Df\API\Client::_p()
 	 * @return string
 	 */
-	protected function uriBase() {return sprintf('https://%s/', G::s()->domain());}
+	protected function urlBase() {return sprintf('https://%s/', G::s()->domain());}
 }
