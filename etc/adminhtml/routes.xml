@@ -4,8 +4,8 @@
 	xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd"
 >
 	<router id='admin'>
-		<route id='Dfe_Salesforce' frontName='dfe-salesforce'>
-			<module name='Dfe_Salesforce' before='Magento_Backend'/>
+		<route frontName='dfe-salesforce' id='Dfe_Salesforce'>
+			<module before='Magento_Backend' name='Dfe_Salesforce'/>
 		</route>
 	</router>
 </config>
