@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Salesforce\T;
+namespace Dfe\Salesforce\Test;
 use Dfe\Salesforce\Settings\General as G;
 use Dfe\Salesforce\API\Facade as F;
 // 2017-07-08
