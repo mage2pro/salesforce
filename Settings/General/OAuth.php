@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\Salesforce\Settings\General;
-// 2017-07-10
+# 2017-07-10
 /** @method static OAuth s() */
 final class OAuth extends \Df\OAuth\Settings {
 	/**

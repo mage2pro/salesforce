@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\Salesforce;
-// 2017-07-10
+# 2017-07-10
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Button extends \Df\OAuth\FE\Button {
 	/**

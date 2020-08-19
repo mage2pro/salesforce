@@ -2,7 +2,7 @@
 namespace Dfe\Salesforce\OAuth;
 use Df\Core\Exception as DFE;
 use Dfe\Salesforce\Settings\General\OAuth as S;
-// 2017-07-10
+# 2017-07-10
 final class App extends \Df\OAuth\App {
 	/**
 	 * 2017-07-10

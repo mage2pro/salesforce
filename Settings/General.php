@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\Salesforce\Settings;
-// 2017-07-09
+# 2017-07-09
 /** @method static General s() */
 final class General extends \Df\Config\Settings {
 	/**
