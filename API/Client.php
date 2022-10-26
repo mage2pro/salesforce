@@ -28,7 +28,7 @@ final class Client extends \Df\API\Client {
 	 * @used-by \Df\API\Client::_p()
 	 * @return array(string => string)
 	 */
-	protected function headers() {return [
+	protected function headers():array {return [
 		'Accept' => 'application/json'
 		# 2017-07-10
 		# Note 1:
@@ -64,7 +64,6 @@ final class Client extends \Df\API\Client {
 	 * @see \Df\API\Client::urlBase()
 	 * @used-by \Df\API\Client::__construct()
 	 * @used-by \Df\API\Client::url()
-	 * @return string
 	 */
-	protected function urlBase() {return sprintf('https://%s/', G::s()->domain());}
+	protected function urlBase():string {return sprintf('https://%s/', G::s()->domain());}
 }

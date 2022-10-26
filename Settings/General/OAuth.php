@@ -9,7 +9,6 @@ final class OAuth extends \Df\OAuth\Settings {
 	 * @see \Df\Config\Settings::prefix()
 	 * @used-by \Df\Config\Settings::v()
 	 * @used-by \Df\OAuth\Settings::refreshTokenSave()
-	 * @return string
 	 */
-	protected function prefix() {return 'df_salesforce/general/oauth';}
+	protected function prefix():string {return 'df_salesforce/general/oauth';}
 }
