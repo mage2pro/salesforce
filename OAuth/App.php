@@ -39,8 +39,8 @@ final class App extends \Df\OAuth\App {
 
 	/**
 	 * 2017-07-11
-	 * @used-by urlAuth()
-	 * @used-by urlToken()
+	 * @used-by self::urlAuth()
+	 * @used-by self::urlToken()
 	 * @param string $s
 	 * @return string
 	 */
