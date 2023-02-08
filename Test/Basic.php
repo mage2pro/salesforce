@@ -5,7 +5,7 @@ use Dfe\Salesforce\API\Facade as F;
 # 2017-07-08
 final class Basic extends TestCase {
 	/** 2017-07-08 @test */
-	function t00() {}
+	function t00():void {}
 
 	/**
 	 * 2017-07-08
@@ -16,15 +16,15 @@ final class Basic extends TestCase {
 	 * «You do not need authentication to retrieve the list of versions.»
 	 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_versions.htm
 	 */
-	function t01_versions() {print_r(df_json_encode(F::s()->versions()));}
+	function t01_versions():void {print_r(df_json_encode(F::s()->versions()));}
 
 	/** 2017-07-09 */
-	function t02_the_latest_version() {print_r(df_json_prettify(df_contents(self::url(
+	function t02_the_latest_version():void {print_r(df_json_prettify(df_contents(self::url(
 		df_last(df_http_json(self::url('services/data')))['url']
 	))));}
 
 	/** 2017-07-09 */
-	function t03_invalid() {print_r(df_json_encode(F::s()->invalid()));}
+	function t03_invalid():void {print_r(df_json_encode(F::s()->invalid()));}
 
 	/**
 	 * 2017-07-09
