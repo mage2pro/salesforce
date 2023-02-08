@@ -24,7 +24,7 @@ final class Facade {
 	 * @return array(string => mixed)
 	 * @throws DFE
 	 */
-	private function p($path, array $p = [], $method = null) {return
+	private function p($path, array $p = [], $method = null):array {return
 		(new Client($path, $p, $method))->p()
 	;}
 
