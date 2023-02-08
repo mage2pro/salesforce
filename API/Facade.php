@@ -4,7 +4,7 @@ use Df\Core\Exception as DFE;
 # 2017-07-09
 final class Facade {
 	/** 2017-07-09 An intentionally invalid request. I use it to implement the proper error handling. */
-	function invalid() {return $this->p('invalid');}
+	function invalid():array {return $this->p('invalid');}
 
 	/**
 	 * 2017-07-09
