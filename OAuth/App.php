@@ -13,9 +13,8 @@ final class App extends \Df\OAuth\App {
 	 * @used-by \Df\OAuth\App::requestToken()
 	 * @used-by \Df\OAuth\App::token()
 	 * @used-by \Df\OAuth\FE\Button::s()
-	 * @return S
 	 */
-	function ss() {return S::s();}
+	function ss():S {return S::s();}
 
 	/**
 	 * 2017-07-10
@@ -23,9 +22,8 @@ final class App extends \Df\OAuth\App {
 	 * @override
 	 * @see \Df\OAuth\App::urlAuth()
 	 * @used-by \Df\OAuth\FE\Button::onFormInitialized()
-	 * @return string
 	 */
-	function urlAuth() {return self::url('authorize');}
+	function urlAuth():string {return self::url('authorize');}
 
 	/**
 	 * 2017-07-11
@@ -33,9 +31,8 @@ final class App extends \Df\OAuth\App {
 	 * @override
 	 * @see \Df\OAuth\App::urlToken()
 	 * @used-by \Df\OAuth\App::requestToken()
-	 * @return string
 	 */
-	protected function urlToken() {return self::url('token');}
+	protected function urlToken():string {return self::url('token');}
 
 	/**
 	 * 2017-07-11

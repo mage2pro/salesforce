@@ -28,6 +28,10 @@ final class Facade {
 		(new Client($path, $p, $method))->p()
 	;}
 
-	/** 2017-07-09 @return self */
-	static function s() {static $r; return $r ? $r : $r = new self;}
+	/**
+	 * 2017-07-09
+	 * @used-by \Dfe\Salesforce\Test\Basic::t01_versions()
+	 * @used-by \Dfe\Salesforce\Test\Basic::t03_invalid()
+	 */
+	static function s():self {static $r; return $r ? $r : $r = new self;}
 }

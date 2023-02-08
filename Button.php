@@ -10,7 +10,7 @@ class Button extends \Df\OAuth\FE\Button {
 	 * @used-by \Df\OAuth\FE\Button::onFormInitialized()
 	 * @return array(string => mixed)
 	 */
-	final protected function pExtra() {return df_clean([
+	final protected function pExtra():array {return df_clean([
 		/**
 		 * 2017-07-11
 		 * «Specifies a value to be returned in the response; this is useful for detecting "replay" attacks.

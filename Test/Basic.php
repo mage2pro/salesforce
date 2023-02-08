@@ -4,11 +4,12 @@ use Dfe\Salesforce\Settings\General as G;
 use Dfe\Salesforce\API\Facade as F;
 # 2017-07-08
 final class Basic extends TestCase {
-	/** @test 2017-07-08 */
+	/** 2017-07-08 @test */
 	function t00() {}
 
 	/**
-	 * @test 2017-07-08
+	 * 2017-07-08
+	 * @test
 	 * «Lists summary information about each Salesforce version currently available,
 	 * including the version, label, and a link to each version's root.
 	 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_versions.htm
@@ -18,7 +19,7 @@ final class Basic extends TestCase {
 	function t01_versions() {print_r(df_json_encode(F::s()->versions()));}
 
 	/** 2017-07-09 */
-	function t02_the_latest_version() {print_r(df_json_prettify(file_get_contents(self::url(
+	function t02_the_latest_version() {print_r(df_json_prettify(df_contents(self::url(
 		df_last(df_http_json(self::url('services/data')))['url']
 	))));}
 
