@@ -38,8 +38,7 @@ final class App extends \Df\OAuth\App {
 	 * 2017-07-11
 	 * @used-by self::urlAuth()
 	 * @used-by self::urlToken()
-	 * @param string $s
 	 * @return string
 	 */
-	private static function url($s) {return "https://login.salesforce.com/services/oauth2/$s";}
+	private static function url(string $s) {return "https://login.salesforce.com/services/oauth2/$s";}
 }
