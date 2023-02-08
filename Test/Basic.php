@@ -28,6 +28,7 @@ final class Basic extends TestCase {
 
 	/**
 	 * 2017-07-09
+	 * @used-by self::t02_the_latest_version()
 	 */
 	private static function url(string $s):string {return sprintf('https://%s/%s.json', G::s()->domain(), df_trim_ds_left($s));}
 }
