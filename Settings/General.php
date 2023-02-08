@@ -5,9 +5,8 @@ namespace Dfe\Salesforce\Settings;
 final class General extends \Df\Config\Settings {
 	/**
 	 * 2017-07-09 «Your Salesforce domain»
-	 * @return string
 	 */
-	function domain() {return $this->v();}
+	function domain():string {return $this->v();}
 
 	/**
 	 * 2017-07-09
