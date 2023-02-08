@@ -18,13 +18,12 @@ final class Facade {
 
 	/**
 	 * 2017-07-09
-	 * @param string $path
 	 * @param array(string => mixed) $p [optional]
 	 * @param string|null $method [optional]
 	 * @return array(string => mixed)
 	 * @throws DFE
 	 */
-	private function p($path, array $p = [], $method = null):array {return (new Client($path, $p, $method))->p();}
+	private function p(string $path, array $p = [], $method = null):array {return (new Client($path, $p, $method))->p();}
 
 	/**
 	 * 2017-07-09
