@@ -14,7 +14,7 @@ final class Facade {
 	 * «You do not need authentication to retrieve the list of versions.»
 	 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_versions.htm
 	 */
-	function versions() {return $this->p('services/data');}
+	function versions():array {return $this->p('services/data');}
 
 	/**
 	 * 2017-07-09
