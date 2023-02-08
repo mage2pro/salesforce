@@ -31,4 +31,3 @@ class Button extends \Df\OAuth\FE\Button {
 		,'scope' => null
 	]);}
 }
-
